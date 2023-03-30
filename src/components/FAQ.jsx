@@ -7,18 +7,17 @@ const FAQ = ({ question, answer }) => {
 
 
   return (
-    <article className='faq' onClick={()=> setIsAnswerShowing(!isAnswerShowing)}>
+    <article
+      className='faq'
+      onClick={() => setIsAnswerShowing(!isAnswerShowing)}
+    >
       <div>
         <h4> {question} </h4>
         <button className='faq__icon'>
-          {
-           isAnswerShowing ? <AiOutlinePlus /> : <AiOutlineMinus/>
-          }
+          {isAnswerShowing ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>
       </div>
-      {
-       isAnswerShowing && <p> {answer} </p>
-      }
+      {isAnswerShowing && <p> {answer} </p>}
     </article>
   )
 }
